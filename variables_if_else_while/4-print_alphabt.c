@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints all the lowercase alphabet
+ * main - prints all the lowercase alphabet except e and q
  *
  * Return: always 0 (success)
  */
