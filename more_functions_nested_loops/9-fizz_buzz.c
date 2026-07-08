@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - print numbers 1 - 100, anything divisible by 3 will print fizz and anything divisible by 5 will print buzz
+ * main - print numbers 1 - 100, and fizzbuzz
+ *
+ * Return: 0 always (success)
  */
 
 int main(void)
