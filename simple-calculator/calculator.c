@@ -33,6 +33,22 @@ void subtract(void)
 }
 
 /**
+ * multiply - suctracting two integers
+ */
+void multiply(void)
+{
+	int num1;
+	int num2;
+
+	printf("A: ");
+	scanf("%d", &num1);
+	printf("B: ");
+	scanf("%d", &num2);
+
+	printf("Result: %d\n", num1 * num2);
+}
+
+/**
  * main - caculator entry point
  *
  * Return: 0 success
@@ -63,7 +79,7 @@ int main(void)
 				subtract();
 				break;
 			case 3:
-				printf("Multiply\n");
+				multiply();
 				break;
 			case 4:
 				printf("Divide\n");
