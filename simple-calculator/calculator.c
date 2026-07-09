@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "math.h"
 
 /**
  * main - caculator entry point
@@ -7,7 +8,7 @@
  */
 int main(void)
 {
-	int n;
+	int user_input;
 
 	printf("Welcome to my Simple Calculator ʕ·ᴥ·ʔ\n\n");
 	printf("Options:\n");
@@ -18,23 +19,32 @@ int main(void)
 	printf("0) Quit\n\n");
 
 	printf("Choice: ");
-	scanf("%d", &n);
+	scanf("%d", &user_input);
 
-	while (n != 0)
+	while (user_input != 0)
 	{
-		if (n > 0 && n < 5)
+		switch (user_input)
 		{
-			printf("Your Choice: %d\n", n);
-		}
-		else
-		{
-			printf("Incorrect option :(\n");
+			case 1:
+				add();
+				break;
+			case 2:
+				printf("Subtract\n");
+				break;
+			case 3:
+				printf("Multiply\n");
+				break;
+			case 4:
+				printf("Divide\n");
+				break;
+			default:
+				printf("Invalid choice: %d\n", user_input);
+				break;
 		}
 		printf("Choice: ");
-		scanf("%d", &n);
+		scanf("%d", &user_input);
 	}
 
 	printf("Bye\n");
-
 	return (0);
 }
