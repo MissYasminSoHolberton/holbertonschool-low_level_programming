@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * add - adding two integers
+ * add - add two integers
  */
 void add(void)
 {
@@ -17,7 +17,7 @@ void add(void)
 }
 
 /**
- * subtract - suctracting two integers
+ * subtract - subtract two integers
  */
 void subtract(void)
 {
@@ -33,7 +33,7 @@ void subtract(void)
 }
 
 /**
- * multiply - suctracting two integers
+ * multiply - multiply two integers
  */
 void multiply(void)
 {
@@ -46,6 +46,29 @@ void multiply(void)
 	scanf("%d", &num2);
 
 	printf("Result: %d\n", num1 * num2);
+}
+
+/**
+ * divide - divide two floats
+ */
+void divide(void)
+{
+	float num1;
+	float num2;
+
+	printf("A: ");
+	scanf("%f", &num1);
+	printf("B: ");
+	scanf("%f", &num2);
+
+	if (num2 == 0)
+	{
+		printf("Error: division by zero\n");
+	}
+	else
+	{
+		printf("Result: %.1f\n", num1 / num2);
+	}
 }
 
 /**
@@ -82,7 +105,7 @@ int main(void)
 				multiply();
 				break;
 			case 4:
-				printf("Divide\n");
+				divide();
 				break;
 			default:
 				printf("Invalid choice: %d\n", user_input);
