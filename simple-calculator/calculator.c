@@ -1,5 +1,20 @@
 #include <stdio.h>
-#include "math.h"
+
+/**
+ * add - adding two integers
+ */
+void add(void)
+{
+	int num1;
+	int num2;
+
+	printf("A: ");
+	scanf("%d", &num1);
+	printf("B: ");
+	scanf("%d", &num2);
+
+	printf("Result: %d\n", num1 + num2);
+}
 
 /**
  * main - caculator entry point
@@ -44,7 +59,6 @@ int main(void)
 		printf("Choice: ");
 		scanf("%d", &user_input);
 	}
-
 	printf("Bye\n");
 	return (0);
 }
