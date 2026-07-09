@@ -9,7 +9,7 @@ int main(void)
 {
 	int n;
 
-	printf("Welcome to my Simple Calculator\n\n");
+	printf("Welcome to my Simple Calculator ʕ·ᴥ·ʔ\n\n");
 	printf("Options:\n");
 	printf("1) Add\n");
 	printf("2) Subtract\n");
@@ -20,17 +20,21 @@ int main(void)
 	printf("Choice: ");
 	scanf("%d", &n);
 
-	if (n > 0 && n < 5)
+	while (n != 0)
 	{
-		printf("Your Choice: %d\n", n);
+		if (n > 0 && n < 5)
+		{
+			printf("Your Choice: %d\n", n);
+		}
+		else
+		{
+			printf("Incorrect option :(\n");
+		}
+		printf("Choice: ");
+		scanf("%d", &n);
 	}
-	else if (n == 0)
-	{
-		printf("\nBye!\n");
-	}
-	else
-	{
-		printf("Incorrect option :(\n");
-	}
+
+	printf("Bye\n");
+
 	return (0);
 }
