@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * get_len - get length of the string
@@ -34,15 +35,15 @@ char *_strcat(char *dest, char *src)
 
 	src_len = get_len(src);
 	dest_len = get_len(dest);
+	printf("%d\n",src_len);
+	printf("%d\n",dest_len);
 	index = 0;
 
-	while (index <= dest_len + src_len)
+	while (index < src_len)
 	{
 		dest[dest_len + index] = src[index];
 		index++;
 	}
-
-	dest[index] = '\0';
 
 	return (dest);
 }
