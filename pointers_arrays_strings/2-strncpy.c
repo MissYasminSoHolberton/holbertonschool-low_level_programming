@@ -29,19 +29,20 @@ int get_len(char *str)
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int src_len;
-	int dest_len;
 	int i;
 
-	src_len = get_len(src);
-	dest_len = get_len(dest);
 	i = 0;
 
-	while (i < n && i <= dest_len && i < src_len && src[0] != '\0')
+	while (i < n && src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;
 	}
 
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
 	return (dest);
 }
