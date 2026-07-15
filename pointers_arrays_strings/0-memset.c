@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memset - fills the first n bytes of the memory area pointed to by s with the constant byte b
+ * _memset - edits memory based on b and n
  * @s: memory address
  * @b: constant byte
  * @n: number of byte to change
@@ -11,7 +11,7 @@
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
-	
+
 	i = 0;
 
 	while (i < n)
