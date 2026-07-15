@@ -19,7 +19,7 @@ char *cap_string(char *str)
 	i = 0;
 	j = 0;
 
-	while (str[i] != '\0')
+	while (str[i+1] != '\0')
 	{
 		is_separator = 0;
 		j = 0;
