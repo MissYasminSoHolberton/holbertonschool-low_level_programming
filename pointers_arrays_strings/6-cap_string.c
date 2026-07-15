@@ -18,17 +18,17 @@ char *cap_string(char *str)
 
 	i = 0;
 	j = 0;
-	
-	if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			str[i] = str[i] - ('a' - 'A');
-		}
 
-	while (str[i+1] != '\0')
+	if (str[i] >= 'a' && str[i] <= 'z')
+	{
+		str[i] = str[i] - ('a' - 'A');
+	}
+
+	while (str[i + 1] != '\0')
 	{
 		is_separator = 0;
 		j = 0;
-		while(separators[j] != '\0')
+		while (separators[j] != '\0')
 		{
 			if (separators[j] == str[i])
 			{
@@ -38,10 +38,10 @@ char *cap_string(char *str)
 		}
 		if (is_separator == 1)
 		{
-			if (str[i+1] >= 'a' && str[i+1] <= 'z')
-				{
-					str[i+1] = str[i+1] - ('a' - 'A');
-				}
+			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+			{
+				str[i + 1] = str[i + 1] - ('a' - 'A');
+			}
 		}
 		i++;
 	}
