@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _strchr - search for the first orrurance of a char
@@ -9,7 +10,7 @@
  */
 char *_strchr(char *s, char c)
 {
-	while (*s != c)
+	while (*s != c && *s != '\0')
 	{
 		s++;
 	}
