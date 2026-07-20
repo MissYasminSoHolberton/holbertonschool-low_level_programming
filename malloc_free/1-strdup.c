@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 /**
- * strdup - copies a string to a new string
+ * _strdup - copies a string to a new string
  * @str: string to copy
  *
  * Return: pointer to the created string or NULL if unsuccessful
@@ -21,7 +21,7 @@ char *_strdup(char *str)
 	}
 
 	i = 0;
-	while (i < size)
+	while (i <= size)
 	{
 		char_array[i] = str[i];
 		i++;
