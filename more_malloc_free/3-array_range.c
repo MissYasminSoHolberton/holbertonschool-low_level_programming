@@ -10,8 +10,8 @@
 int *array_range(int min, int max)
 {
 	int *result;
-	unsigned int i;
-	unsigned int size;
+	int i;
+	int size;
 
 	if (min > max)
 	{
@@ -19,6 +19,8 @@ int *array_range(int min, int max)
 	}
 
 	size = max - min + 1;
+	if (size < 0)
+		size *= -1;
 
 	result = malloc(sizeof(int) * size);
 
@@ -28,7 +30,7 @@ int *array_range(int min, int max)
 	}
 
 	i = 0;
-	while (i <= size)
+	while (i < size)
 	{
 		result[i] = min + i;
 		i++;
