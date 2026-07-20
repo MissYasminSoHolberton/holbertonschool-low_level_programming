@@ -12,16 +12,28 @@ char *_strdup(char *str)
 	int i;
 	int size;
 
-	size = sizeof(str) + 1;
-	char_array = malloc(size);
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	
+	i = 0;
+	size = 0;
+	while (str[i]!= '\0')
+	{
+		size++;
+		i++;
+	}
 
-	if (char_array == NULL || size == 0)
+	char_array = malloc(size + 1);
+
+	if (char_array == NULL || size == 0 || str == NULL)
 	{
 		return (NULL);
 	}
 
 	i = 0;
-	while (i <= size)
+	while (str[i] != '\0')
 	{
 		char_array[i] = str[i];
 		i++;
