@@ -3,11 +3,8 @@
 #include <stdio.h>
 
 /**
- * init_dog - initalize dog struct
+ * print_dog - prints information of doggo
  * @d: dog struct
- * @name: name of doggo
- * @age: age of doggo
- * @owner: owner of doggo
  */
 void print_dog(struct dog *d)
 {
