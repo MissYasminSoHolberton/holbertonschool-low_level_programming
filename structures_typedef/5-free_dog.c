@@ -4,7 +4,7 @@
 
 /**
  * free_dog - free the doggo! free the memory allocated
- * @d - struct that was made
+ * @d: struct that was made
  */
 void free_dog(dog_t *d)
 {
