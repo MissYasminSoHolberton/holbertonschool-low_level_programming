@@ -6,12 +6,24 @@
  * @array: input array
  * @size: size or array
  * @cmp: function poiners
+ *
+ * Return: index of the string and -1 if cant find in the array
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
 
 	i = 0;
+
+	if (array == NULL)
+	{
+		return (-1);
+	}
+
+	if (cmp == NULL)
+	{
+		return (-1);
+	}
 
 	if (size <= 0)
 	{
