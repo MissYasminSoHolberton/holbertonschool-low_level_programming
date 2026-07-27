@@ -16,28 +16,19 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	i = 0;
 
 	if (separator == NULL)
-	{
 		separator = "";
-	}
 
 	if (n == 0)
 	{
 		printf("\n");
 		return;
 	}
-
 	va_start(strings, n);
-
 	word = va_arg(strings, char*);
 	if (word == NULL)
-	{
 		printf("(nil)");
-	}
 	else
-	{
 		printf("%s", word);
-	}
-
 	while (i < n - 1)
 	{
 		j = 0;
@@ -46,21 +37,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("%c", separator[j]);
 			j = j + 1;
 		}
-
 		word = va_arg(strings, char*);
 		if (word == NULL)
-		{
 			printf("(nil)");
-		}
 		else
-		{
 			printf("%s", word);
-		}
-
 		i = i + 1;
 	}
-
 	printf("\n");
-
 	va_end(strings);
 }
