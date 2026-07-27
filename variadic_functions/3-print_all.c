@@ -76,7 +76,7 @@ void print_all(const char * const format, ...)
 		i = 0;
 		while (printers[i].format != '\0')
 		{
-			if (format[j] == printers[i].format && format != NULL)
+			if (format != NULL && format[j] == printers[i].format)
 			{
 				printf("%s", separator);
 				printers[i].print(list);
