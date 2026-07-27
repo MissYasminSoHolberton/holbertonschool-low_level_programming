@@ -70,18 +70,13 @@ void print_all(const char * const format, ...)
 
 	va_start(list, format);
 
-	if (format == NULL)
-	{
-		printf("\n");
-	}
-
 	j = 0;
 	while (format[j] != '\0')
 	{
 		i = 0;
 		while (printers[i].format != '\0')
 		{
-			if (format[j] == printers[i].format)
+			if (format[j] == printers[i].format && format != NULL)
 			{
 				printf("%s", separator);
 				printers[i].print(list);
