@@ -71,12 +71,12 @@ void print_all(const char * const format, ...)
 	va_start(list, format);
 
 	j = 0;
-	while (format[j] != '\0')
+	while (format != NULL && format[j] != '\0')
 	{
 		i = 0;
 		while (printers[i].format != '\0')
 		{
-			if (format != NULL && format[j] == printers[i].format)
+			if (format[j] == printers[i].format)
 			{
 				printf("%s", separator);
 				printers[i].print(list);
