@@ -70,6 +70,11 @@ void print_all(const char * const format, ...)
 
 	va_start(list, format);
 
+	if (format == NULL)
+	{
+		printf("\n");
+	}
+
 	j = 0;
 	while (format[j] != '\0')
 	{
