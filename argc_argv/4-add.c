@@ -2,6 +2,32 @@
 #include <stdlib.h>
 
 /**
+ * input_checker - checks if input is an int
+ * @i: input
+ *
+ * Return: number if input is int, 0 otherwise
+ */
+int input_checker(char *i)
+{
+	int num;
+	char *endptr;
+
+	num = strtol(i, &endptr, 10);
+	if (endptr == i)
+	{
+		return (0);
+	}
+	else if (*endptr != '\0')
+	{
+		return (0);
+	}
+	else
+	{
+		return (num);
+	}
+}
+
+/**
  * main - entry point of program
  * @argc: number of arguments
  * @argv: array or args
@@ -25,7 +51,7 @@ int main(int argc, char *argv[])
 			continue;
 		}
 
-		num = atoi(argv[i]);
+		num = input_checker(argv[i]);
 
 		if (num == 0)
 		{
