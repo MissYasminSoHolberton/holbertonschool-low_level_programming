@@ -4,7 +4,8 @@
 
 Only one stack frame exists.
 
-```Stack (top)
+```
+Stack (top)
 
 +----------------------+
 | main()               |
@@ -13,7 +14,8 @@ Only one stack frame exists.
 
 Heap
 ----
-(empty)```
+(empty)
+```
 
 Lifetime:
 - main() frame is created when the program starts.
@@ -23,7 +25,8 @@ Lifetime:
 
 A new stack frame is pushed.
 
-```Stack
+```
+Stack
 
 +----------------------+
 | walk_stack           |
@@ -38,9 +41,12 @@ A new stack frame is pushed.
 
 Heap
 ----
-(empty)```
+(empty)
+```
 
-```int marker = depth * 10;```
+```
+int marker = depth * 10;
+```
 This creates a new local variable inside this frame.
 
 
