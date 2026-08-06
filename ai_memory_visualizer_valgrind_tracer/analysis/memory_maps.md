@@ -5,7 +5,7 @@ This program demonstrates how recursive function calls create independent stack 
 
 ---
 
-# Memory Map
+# Memory Map (AI assisted)
 
 ## Step 1 – Enter `main()`
 
@@ -409,12 +409,14 @@ Heap
 
 
 
-# Memory Analysis -- `aliasing_example.c`
+# Program: `aliasing_example.c`
 
 ## Description
 This program demonstrates how dynamic memory allocation works using the heap, as well as pointer aliasing and a use-after-free error. Memory is allocated on the heap using malloc(), while local variables and pointers are stored on the stack. Two pointers (a and b) reference the same heap memory, creating an alias. After the heap memory is deallocated using free(), both pointers still contain the same address, but the memory is no longer valid.
 
 ---
+
+# Memory Map (AI assisted)
 
 ## Step 1 -- Enter `main()`
 
