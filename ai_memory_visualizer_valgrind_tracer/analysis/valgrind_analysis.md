@@ -1,4 +1,4 @@
-# Valgrind Analysis: `aliasing_example.c`
+# AI Assisted Valgrind Analysis: `aliasing_example.c`
 
 ---
 
