@@ -35,23 +35,39 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	int index;
 	hash_node_t *node;
 	hash_node_t *new;
+	char *new_value;
 
 	if (ht == NULL)
-	{
 		return (0);
-	}
 
 	index = key_index((unsigned char *)key, ht->size);
 
 	node = ht->array[index];
 	new = ht_pair(key, value);
 
+	while (node != NULL)
+	{
+		if (strcmp(node->key, key) == 0)
+		{
+			new_value = malloc(strlen(value) + 1);
+			if (new_value == NULL)
+				return (0);
+
+			strcpy(new_value, value);
+
+			free(node->value);
+			node->value = new_value;
+
+			return (1);
+		}
+		node = node->next;
+	}
+
 	if (node == NULL)
 	{
 		ht->array[index] = new;
 		return (1);
 	}
-
 	new->next = node;
 	ht->array[index] = new;
 
