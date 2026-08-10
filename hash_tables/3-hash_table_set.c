@@ -41,9 +41,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	index = key_index((unsigned char *)key, ht->size);
-
 	node = ht->array[index];
-	new = ht_pair(key, value);
 
 	while (node != NULL)
 	{
@@ -63,12 +61,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		node = node->next;
 	}
 
-	if (node == NULL)
+	new = ht_pair(key, value);
+
+	if (new == NULL)
 	{
-		ht->array[index] = new;
 		return (1);
 	}
-	new->next = node;
+	new->next = ht->array[index];
 	ht->array[index] = new;
 
 	return (1);
