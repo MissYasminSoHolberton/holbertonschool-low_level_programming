@@ -34,7 +34,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	int index;
 	hash_node_t *node;
-	hash_node_t *curr;
+
+	if (ht == NULL)
+	{
+		return (0);
+	}
 
 	index = key_index((unsigned char *)key, ht->size);
 
@@ -46,13 +50,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (1);
 	}
 
-	curr = node;
-	while (curr->next != NULL)
-	{
-		curr = curr->next;
-	}
-
-	curr->next = ht_pair(key, value);
+	ht_pair(key, value)->next = node;
 
 	return (1);
 }
