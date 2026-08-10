@@ -34,6 +34,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	int index;
 	hash_node_t *node;
+	hast_node_t *new;
 
 	if (ht == NULL)
 	{
@@ -43,14 +44,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	index = key_index((unsigned char *)key, ht->size);
 
 	node = ht->array[index];
+	new = ht_pair(key,value);
 
 	if (node == NULL)
 	{
-		ht->array[index] = ht_pair(key, value);
+		ht->array[index] = new;
 		return (1);
 	}
 
-	ht_pair(key, value)->next = node;
+	new->next = node;
+	node = new;
 
 	return (1);
 }
